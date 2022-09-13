@@ -97,22 +97,26 @@ namespace ProductPd.ViewModel
         }
         public void PrintReceipt()
         {
-            
+
             if (IsProductsOrdered)
             {
                 foreach (var p in SelectedProducts)
                 {
                     if (p != null)
                     {
-                        foreach (var orderProduct in OrderedProducts)
-                            if (orderProduct == p)
-                            {
-                                return;
-                            }
-                        OrderedProducts.Add(p);
+                        if (p.Qty != 0)
+                        {
+                            foreach (var orderProduct in OrderedProducts)
+                                if (orderProduct == p)
+                                {
+                                    return;
+                                }
+                            OrderedProducts.Add(p);
+                        }
+
                     }
                 }
-                
+
             }
 
         }

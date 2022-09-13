@@ -73,7 +73,7 @@
                    Foreground="Yellow" 
                    HorizontalAlignment="Stretch">Your Trolley</Label>
 
-            <!--<DataGrid x:Name="SaleLineItem" Grid.Row="3" Grid.Column="1"  ItemsSource="{Binding Products,Mode=OneWay}"/>-->
+            
 
             <DataGrid x:Name="SaleLineItem" Margin="0 0 0 10" 
                       SelectedItem="{Binding SelectedProduct, Mode=TwoWay}"

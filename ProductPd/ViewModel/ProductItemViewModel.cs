@@ -17,7 +17,7 @@ namespace ProductPd.ViewModel
 
         public ProductItemViewModel(Product model)
         {
-            this._model = model;
+            _model = model;
         }
 
         public int Id => _model.Id;//make Id readonly
@@ -69,11 +69,7 @@ namespace ProductPd.ViewModel
 
         public double PriceTotal
         {
-            get
-            {
-                return _model.PriceTotal= PriceAmount * Qty;
-            }
-
+            get => _model.PriceTotal = PriceAmount * Qty;
 
         }
 
